@@ -1,0 +1,23 @@
+{
+  "name": "crowd",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "calvert hall crowd",
+  "main": "build/app.js",
+  "scripts": {
+    "test": "test",
+    "app": "tsc && sudo node ."
+  },
+  "author": "bremea",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "eslint": "^8.9.0",
+    "esniffer": "^1.0.1",
+    "pcap": "^3.1.0",
+    "petitio": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
