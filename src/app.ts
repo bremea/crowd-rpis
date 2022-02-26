@@ -1,6 +1,7 @@
 import {createSession, decode} from 'pcap';
 import petitio from 'petitio';
-(await import('dotenv')).config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 let ppm: string[] = [];
 
