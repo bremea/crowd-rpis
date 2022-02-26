@@ -4,7 +4,7 @@ import petitio from 'petitio';
 
 let ppm: string[] = [];
 
-const pcap = createSession('en0', {});
+const pcap = createSession('wlan0', {});
 pcap.on('packet', (p) => ppm.push(decode.packet(p).payload.shost.addr.join('.')));
 
 setInterval(() => {
