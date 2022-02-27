@@ -16,4 +16,4 @@ setInterval(async () => {
 	await rr.send();
 	console.log(await rr.json());
 	ppm = [];
-}, 1000);
+}, 60 * 1000);
