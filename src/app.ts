@@ -5,14 +5,14 @@ dotenv.config();
 
 let ppm: string[] = [];
 
-const pcap = createSession('wlan0', {});
+const pcap = createSession('en0', {});
 pcap.on('packet', (p) => ppm.push(decode.packet(p).payload.shost.addr.join('.')));
 
-setInterval(() => {
+setInterval(async () => {
 	const rr = petitio(process.env.URL!);
 	rr.method('POST');
 	rr.body({unique: ppm.filter((v, i, a) => a.indexOf(v) === i).length}, 'json');
 	rr.header('Authorization', process.env.AUTH!);
-	rr.send();
+	await rr.send();
 	ppm = [];
-}, 60 * 1000);
+}, 1000);

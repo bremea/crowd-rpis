@@ -14,6 +14,7 @@
     "dotenv": "^16.0.0",
     "eslint": "^8.9.0",
     "esniffer": "^1.0.1",
+    "lcd": "^3.1.1",
     "pcap": "^3.1.0",
     "petitio": "^1.4.0",
     "typescript": "^4.5.5"
