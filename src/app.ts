@@ -5,7 +5,7 @@ dotenv.config();
 
 let ppm: string[] = [];
 
-const pcap = createSession('wlan0', {});
+const pcap = createSession('en0', {});
 pcap.on('packet', (p) => ppm.push(decode.packet(p).payload.shost.addr.join('.')));
 
 setInterval(async () => {
@@ -16,4 +16,4 @@ setInterval(async () => {
 	await rr.send();
 	console.log(await rr.json());
 	ppm = [];
-}, 10 * 60 * 1000);
+}, 60 * 1000);
